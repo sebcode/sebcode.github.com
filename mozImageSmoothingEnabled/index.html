@@ -1,0 +1,39 @@
+<!doctype html>
+<title>mozImageSmoothingEnabled example</title>
+
+<p>
+	Example for
+	<a href="https://developer.mozilla.org/en/Canvas_tutorial/Using_images">mozImageSmoothingEnabled</a>
+	(Firefox only).
+</p>
+
+<canvas style="border: 1px solid black" id="canvas" width="600" height="500"></canvas>
+
+<script>
+
+(function() {
+
+	var img = new Image
+		,canvas = document.getElementById('canvas')
+		,ctx = canvas.getContext('2d')
+		,idata
+		,idata2
+
+	img.src = 'mario.png'
+	img.onload = function() {
+		ctx.drawImage(img, 0, 0, 50, 50)
+
+		idata = ctx.getImageData(0, 0, 50, 50)
+		idata2 = ctx.getImageData(50, 50, 100, 100)
+
+		ctx.mozImageSmoothingEnabled = false
+		ctx.drawImage(img, 0, 50, 300, 300)
+		
+		ctx.mozImageSmoothingEnabled = true
+		ctx.drawImage(img, 300, 50, 300, 300)
+	}
+
+})()
+
+</script>
+
