@@ -1,0 +1,50 @@
+<!doctype html>
+<title>test</title>
+
+<canvas id="canvas" width="400" height="300"></canvas>
+
+<script>
+
+(function () {
+
+	var canvas = document.getElementById('canvas')
+		,ctx = canvas.getContext('2d')
+		,w = canvas.width
+		,h = canvas.height
+		,x = w / 2
+		,y = h / 2
+		,a = 0
+		,mx = 0
+		,my = 0
+	
+	setInterval(function() {
+		ctx.fillStyle = "black"
+		ctx.fillRect(0, 0, w, h)
+		
+		angle = Math.atan((y - my) / (x - mx))
+		if (mx <= x) {
+			angle -= Math.PI
+		}
+		
+		ctx.save()
+		ctx.beginPath()
+		ctx.strokeStyle = 'white'
+		ctx.lineWidth = 2
+		ctx.translate(x, y)
+		ctx.rotate(angle)
+		ctx.moveTo(0, 0)
+		ctx.lineTo(30, 0)
+		ctx.stroke()
+		ctx.closePath()
+		ctx.restore()
+	}, 1000 / 60)
+
+	addEventListener('mousemove', function(e) {
+		mx = e.clientX - canvas.offsetLeft
+		my = e.clientY - canvas.offsetTop
+	}, true)
+
+}())
+
+</script>
+

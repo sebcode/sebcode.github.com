@@ -1,0 +1,122 @@
+<!doctype html>
+<title>test</title>
+<script src="engine.js"></script>
+
+<p>use cursor keys to move</p>
+
+<canvas style="border: 1px solid black" id="canvas" width="600" height="400"></canvas>
+
+<script>
+
+var MY = {}
+
+/* ::::::::::::: MainScene ::::::::::::: */
+
+MY.MainScene = function()
+{
+	MY.MainScene.superproto.constructor.call(this)
+
+	this.layers.layer1 = new GO.Layer
+	this.layers.layer2 = new GO.Layer
+	this.layers.layer3 = new GO.Layer
+
+	window.addEventListener('keydown', function(e) {
+		if (GO.pause) {
+			return
+		}
+
+		var c = e.keyCode || e.charCode || 0
+
+		switch (c) {
+			case 37:
+				GO.scenes.main.goLeft = true
+				break
+			
+			case 38:
+				GO.scenes.main.goUp = true
+				break
+			
+			case 39:
+				GO.scenes.main.goRight = true
+				break
+		}
+	}, true)
+	
+	window.addEventListener('keyup', function(e) {
+		var c = e.keyCode || e.charCode || 0
+
+		switch (c) {
+			case 37:
+				GO.scenes.main.goLeft = false
+				break
+			
+			case 38:
+				GO.scenes.main.goUp = false
+				break
+			
+			case 39:
+				GO.scenes.main.goRight = false
+				break
+		}
+	}, true)
+
+	this.x = GO.Screen.width / 2
+	this.y = GO.Screen.height / 2
+	this.gravity = 0
+	this.v = 0
+}
+
+GO.Util.extend(MY.MainScene, GO.Scene)
+
+MY.MainScene.prototype.process = function()
+{
+	MY.MainScene.superproto.process.call(this)
+
+	this.clear()
+
+	GO.ctx.fillRect(this.x, this.y, 10, 10)
+
+	this.x += GO.delta * this.v
+	this.y += GO.delta * this.gravity
+
+	this.gravity += GO.delta * 100
+	if (this.gravity >= 100) {
+		this.gravity = 100
+	}
+
+	if (this.goUp) {
+		this.gravity -= GO.delta * 300
+	}
+
+	if (this.goRight) {
+		this.v += GO.delta * 300
+	} else if (this.goLeft) {
+		this.v -= GO.delta * 300
+	}
+	
+	if (this.v > 100) {
+		this.v = 100
+	} else if (this.v < -100) {
+		this.v += GO.delta * 100
+	} else if (this.v > 0) {
+		this.v -= GO.delta * 100
+	} else if (this.v < 0) {
+		this.v += GO.delta * 100
+	}
+}
+
+/* ::::::::::::: Init ::::::::::::: */
+
+GO.config.showFPS = true
+GO.config.fontName = 'monospace'
+
+GO.init = function()
+{
+	this.scenes.main = new MY.MainScene
+	this.setScene(this.scenes.main)
+}
+
+GO.start()
+
+</script>
+

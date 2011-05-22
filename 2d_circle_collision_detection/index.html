@@ -1,0 +1,51 @@
+<!doctype html>
+<title>collision</title>
+
+<canvas id="canvas" width="500" height="300"></canvas>
+
+<script>
+
+var canvas = document.getElementById('canvas')
+	,ctx = canvas.getContext('2d')
+	,w = canvas.width
+	,h = canvas.height
+	,touching = false
+	,distance = 0
+	,radius1 = 20
+	,radius2 = 30
+	/* circle's x, y position */
+	,x = w / 2, y = h / 2
+	/* pointer's x, y position */
+	,px = 0, py = 0
+
+setInterval(function() {
+	ctx.fillStyle = "black"
+	ctx.fillRect(0, 0, w, h)
+
+	distance = Math.sqrt(Math.pow(x - px, 2) + Math.pow(y - py, 2))
+	touching = distance <= radius1 + radius2
+	
+	ctx.fillStyle = 'white'
+	ctx.font = '20px sans-serif'
+	ctx.fillText('d: ' + distance, 10, 30)
+	
+	ctx.fillStyle = touching ? "red" : "white"
+	ctx.beginPath()
+	ctx.arc(x, y, radius1, Math.PI * 2, 0, true)
+	ctx.fill()
+	ctx.closePath()
+	
+	ctx.fillStyle = "green"
+	ctx.beginPath()
+	ctx.arc(px, py, radius2, Math.PI * 2, 0, true)
+	ctx.fill()
+	ctx.closePath()
+}, 1000 / 60)
+
+canvas.addEventListener('mousemove', function(e) {
+	px = e.clientX - canvas.offsetLeft
+	py = e.clientY - canvas.offsetTop
+}, true)
+
+</script>
+
