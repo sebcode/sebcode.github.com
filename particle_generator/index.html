@@ -1,0 +1,95 @@
+<!doctype html>
+<title>particle fun</title>
+
+<canvas id="canvas" width="600" height="500"></canvas>
+
+<pre>
+keys:
+s: toggle auto generation
+g: toggle gravity
+a: add single particle
+r: reset particles
+z,x: dec/inc velocity
+c,v: dec/inc lifetime
+</pre>
+
+<script src="engine.js"></script>
+
+<script>
+
+GO.config.showFPS = true
+GO.config.fontName = 'monospace'
+
+MyScene = function()
+{
+	MyScene.superclass.call(this)
+
+	this.layers.fg = new GO.Layer
+
+	this.auto = true
+	this.lifetime = 1
+	this.v = 20
+	this.hasgravity = false
+}
+
+GO.Util.extend(MyScene, GO.Scene)
+
+MyScene.prototype.process = function()
+{
+	GO.ctx.clearRect(0, 0, GO.Screen.width, GO.Screen.height)
+
+	MyScene.superproto.process.call(this)
+
+	if (this.auto || GO.Event.Keyboard.chrLower == 'a') {
+		var e = new GO.Particle
+		e.x = GO.Screen.width / 2
+		e.y = GO.Screen.height / 2
+		e.gravity = this.hasgravity ? 200 : 0
+		e.gravityangle = 1
+		e.lifetime = this.lifetime
+		e.v = this.v + (Math.random() * 50)
+		e.setColorScheme({ r: 0, g: 0, b: -1 })
+		this.layers.fg.push(e)
+	}
+	
+	if (GO.Event.Keyboard.chrLower == 'r') {
+		this.layers.fg.clear()
+	}
+	
+	if (GO.Event.Keyboard.chrLower == 's') {
+		this.auto = ! this.auto
+	}
+	
+	if (GO.Event.Keyboard.chrLower == 'g') {
+		this.hasgravity = ! this.hasgravity
+		GO.msg = this.hasgravity ? '1' : '0'
+	}
+	
+	if (GO.Event.Keyboard.chrLower == 'z') {
+		this.v -= 5
+		GO.msg = this.v
+	}
+	if (GO.Event.Keyboard.chrLower == 'x') {
+		this.v += 5
+		GO.msg = this.v
+	}
+	
+	if (GO.Event.Keyboard.chrLower == 'c') {
+		this.lifetime -= 0.1
+		GO.msg = this.lifetime
+	}
+	if (GO.Event.Keyboard.chrLower == 'v') {
+		this.lifetime += 0.1
+		GO.msg = this.lifetime
+	}
+}
+
+GO.init = function()
+{
+	GO.scenes.game = new MyScene
+	GO.setScene(GO.scenes.game)
+}
+
+GO.start()
+
+</script>
