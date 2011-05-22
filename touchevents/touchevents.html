@@ -1,0 +1,115 @@
+<!doctype html>
+<title>touchevents</title>
+
+<canvas id="canvas" width="500" height="300"></canvas>
+
+<script>
+
+function isTouchDevice() {
+	var el = document.createElement('div')
+	el.setAttribute('ongesturestart', 'return;')
+	return typeof el.ongesturestart == "function"
+}
+
+var canvas = document.getElementById('canvas')
+	,ctx = canvas.getContext('2d')
+	,w = canvas.width
+	,h = canvas.height
+	,istouch = isTouchDevice()
+	/* circle's x, y position */
+	,x = w / 2, y = h / 2
+	/* pointer's x, y position */
+	,px = 0, py = 0
+	/* offset x, y */
+	,ox = 0, oy = 0
+	/* pointer is over circle */
+	,pointover = false
+	/* pointer is grabbing circle */
+	,grabbing = false
+	/* user is touching or holding mouse button down */
+	,isdown = false
+
+setInterval(function() {
+	ctx.fillStyle = "black"
+	ctx.fillRect(0, 0, w, h)
+	
+	ctx.fillStyle = 'white'
+	ctx.font = '20px sans-serif'
+	ctx.fillText(
+		'px:' + px +
+		' py:' + py +
+		' g:' + (grabbing ? '1' : '0') +
+		' po:' + (pointover ? '1' : '0') +
+		' id:' + (isdown ? '1' : '0') +
+		' istouchdevice:' + (istouch ? '1' : '0')
+		, 10, 30)
+
+	ctx.fillStyle = grabbing ? "red" : "white"
+	ctx.beginPath()
+	ctx.arc(x, y, 30, Math.PI * 2, 0, true)
+	ctx.fill()
+	pointover = ctx.isPointInPath(px, py)
+	ctx.closePath()
+
+	if (isdown && pointover) {
+		grabbing = true
+	}
+
+	if (grabbing) {
+		x = px - ox
+		y = py - oy
+	}
+}, 1000 / 60)
+
+if (!istouch) {
+	canvas.addEventListener('mousemove', function(e) {
+		px = e.clientX - canvas.offsetLeft
+		py = e.clientY - canvas.offsetTop
+	}, true)
+
+	canvas.addEventListener('mousedown', function(e) {
+		px = e.clientX - canvas.offsetLeft
+		py = e.clientY - canvas.offsetTop
+		
+		ox = px - x
+		oy = py - y
+
+		isdown = true
+	}, true)
+
+	canvas.addEventListener('mouseup', function(e) {
+		isdown = false
+		grabbing = false
+	}, true)
+}
+
+else {
+	canvas.addEventListener('touchmove', function(e) {
+		px = e.targetTouches[0].pageX - canvas.offsetLeft
+		py = e.targetTouches[0].pageY - canvas.offsetTop
+
+		e.preventDefault()
+	}, true)
+
+	canvas.addEventListener('touchstart', function(e) {
+		px = e.touches[0].clientX - canvas.offsetLeft
+		py = e.touches[0].clientY - canvas.offsetTop
+
+		ox = px - x
+		oy = py - y
+
+		isdown = true
+	}, true)
+
+	canvas.addEventListener('touchend', function(e) {
+		isdown = false
+		grabbing = false
+	}, true)
+
+	canvas.addEventListener('touchcancel', function(e) {
+		isdown = false
+		grabbing = false
+	}, true)
+}
+
+</script>
