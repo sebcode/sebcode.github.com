@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Directory Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Directory" class="dashAnchor"></a>
+    <a title="Directory Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (29% documented)</p>
+        <p class="header-right"><a href="https://github.com/sebcode/SwiftHelperKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fsebcode%2Egithub%2Eio%2Fdocsets%2F%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Directory Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Directory.html">Directory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/File.html">File</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FilePath.html">FilePath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/IniParser.html">IniParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TreeHash.html">TreeHash</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/FileError.html">FileError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSColor.html">NSColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSData.html">NSData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSTimeInterval.html">NSTimeInterval</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/UInt8.html">UInt8</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF14SwiftHelperKitoi1lFTCSo6NSDateS0__Sb">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF14SwiftHelperKitoi2eeFTCSo6NSDateS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF14SwiftHelperKitoi2eeFTCS_8FilePathS0__Sb">==(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Directory</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Directory</span><span class="p">:</span> <span class="kt">FilePath</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>Directory</code> is a wrapper class for a file system directory.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Factories"></a>
+                <a name="//apple_ref/swift/Section/Factories" class="dashAnchor"></a>
+                <a href="#/Factories">
+                  <h3 class="section-name">Factories</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC14SwiftHelperKit9Directory27applicationSupportDirectoryFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/applicationSupportDirectory()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC14SwiftHelperKit9Directory27applicationSupportDirectoryFT_S0_">applicationSupportDirectory()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the application support directory relative to the user&rsquo;s home directory
+(<code>~/Library/Application Support</code>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">applicationSupportDirectory</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Directory</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC14SwiftHelperKit9Directory18downloadsDirectoryFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/downloadsDirectory()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC14SwiftHelperKit9Directory18downloadsDirectoryFT_S0_">downloadsDirectory()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the user&rsquo;s <code>Downloads</code> directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">downloadsDirectory</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Directory</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC14SwiftHelperKit9Directory13homeDirectoryFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/homeDirectory()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC14SwiftHelperKit9Directory13homeDirectoryFT_S0_">homeDirectory()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the user&rsquo;s home directory (e.g. <code>/Users/peter</code>).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">homeDirectory</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Directory</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC14SwiftHelperKit9Directory13tempDirectoryFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/tempDirectory()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC14SwiftHelperKit9Directory13tempDirectoryFT_S0_">tempDirectory()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the user&rsquo;s directory for temporary files.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">tempDirectory</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Directory</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory12subDirectoryFSSS0_"></a>
+                    <a name="//apple_ref/swift/Method/subDirectory(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory12subDirectoryFSSS0_">subDirectory(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a subdirectory relative to this directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">subDirectory</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Directory</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Name of the subdirectory.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Static%20Helper"></a>
+                <a name="//apple_ref/swift/Section/Static Helper" class="dashAnchor"></a>
+                <a href="#/Static%20Helper">
+                  <h3 class="section-name">Static Helper</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC14SwiftHelperKit9Directory19findCommonDirectoryFGSaS0__GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/findCommonDirectory(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC14SwiftHelperKit9Directory19findCommonDirectoryFGSaS0__GSqS0__">findCommonDirectory(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds the common directory for the list of directories provided.</p>
+
+<p>Example: The common directory for <code>/tmp/test1</code> and <code>/tmp/test2</code>
+is <code>/tmp</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">findCommonDirectory</span><span class="p">(</span><span class="nv">directories</span><span class="p">:</span> <span class="p">[</span><span class="kt">Directory</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">Directory</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>directories</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Array of <code>Directory</code> instances.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance of <code>nil</code> on failure.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/File%20factories"></a>
+                <a name="//apple_ref/swift/Section/File factories" class="dashAnchor"></a>
+                <a href="#/File%20factories">
+                  <h3 class="section-name">File factories</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory4fileFSSCS_4File"></a>
+                    <a name="//apple_ref/swift/Method/file(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory4fileFSSCS_4File">file(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new instance of <code><a href="../Classes/File.html">File</a></code> for the given relative file name
+for this directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">file</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">File</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Relative file name.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code><a href="../Classes/File.html">File</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory11nextNewFileFTSS8appendixSS5triesSi_GSqCS_4File_"></a>
+                    <a name="//apple_ref/swift/Method/nextNewFile(_:appendix:tries:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory11nextNewFileFTSS8appendixSS5triesSi_GSqCS_4File_">nextNewFile(_:appendix:tries:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Find a new non-existing filename similar to <code>name</code>.
+Filenames are counted up like <code>Testfile.txt</code>, <code>Testfile (2).txt</code>, <code>Testfile (3).txt</code>.</p>
+
+<p>If <code>appendix</code> is specified, it will be appended as an additional file extension,
+e.g. appendix <code>part</code> would return <code>Testfile.txt.part</code>, <code>Testfile (2).txt.part</code>,
+<code>Testfile (2).txt.part</code>, etc.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">nextNewFile</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">appendix</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span> <span class="nv">tries</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">File</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Base filename without path.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>appendix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional additional file extension.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tries</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum tries to find a non-existant filename.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A new <code><a href="../Classes/File.html">File</a></code> object or nil on failure.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory4globFzSSGSqGSaCS_8FilePath__"></a>
+                    <a name="//apple_ref/swift/Method/glob(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory4globFzSSGSqGSaCS_8FilePath__">glob(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wrapper for the C-function glob(3). Finds files and directories based
+on a pattern relative to this directory. Accepts patterns like <code>*.png</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">glob</span><span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">FilePath</span><span class="p">]?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pattern</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Glob-pattern.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of <code><a href="../Classes/File.html">File</a></code> and <code><a href="../Classes/Directory.html">Directory</a></code> instances or <code>nil</code> on failure.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory5filesFT_GSaCS_8FilePath_"></a>
+                    <a name="//apple_ref/swift/Method/files()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory5filesFT_GSaCS_8FilePath_">files()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds all files and directories recursivly relative to this
+directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">files</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">FilePath</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array of <code><a href="../Classes/File.html">File</a></code> and <code><a href="../Classes/Directory.html">Directory</a></code> instances.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Convenience%20properties"></a>
+                <a name="//apple_ref/swift/Section/Convenience properties" class="dashAnchor"></a>
+                <a href="#/Convenience%20properties">
+                  <h3 class="section-name">Convenience properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC14SwiftHelperKit9Directory15parentDirectoryS0_"></a>
+                    <a name="//apple_ref/swift/Property/parentDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC14SwiftHelperKit9Directory15parentDirectoryS0_">parentDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the parent directory for this directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">parentDirectory</span><span class="p">:</span> <span class="kt">Directory</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code><a href="../Classes/Directory.html">Directory</a></code> instance.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC14SwiftHelperKit9Directory6existsSb"></a>
+                    <a name="//apple_ref/swift/Property/exists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC14SwiftHelperKit9Directory6existsSb">exists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks if this is a existing directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">exists</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if directory exists.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Write%20operations"></a>
+                <a name="//apple_ref/swift/Section/Write operations" class="dashAnchor"></a>
+                <a href="#/Write%20operations">
+                  <h3 class="section-name">Write operations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory6createFzT_T_"></a>
+                    <a name="//apple_ref/swift/Method/create()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory6createFzT_T_">create()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Attemts to create this directory (with intermediate directories).
+Throws <code>FileError.FileNotWritable</code> on failure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC14SwiftHelperKit9Directory14createTempFileFzTSS_CS_4File"></a>
+                    <a name="//apple_ref/swift/Method/createTempFile(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC14SwiftHelperKit9Directory14createTempFileFzTSS_CS_4File">createTempFile(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new empty temporary file relative to this directory.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createTempFile</span><span class="p">(</span><span class="nv">prefix</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"tmp"</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">File</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>prefix</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Prefix for the temporary filename.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>New <code><a href="../Classes/File.html">File</a></code> instance for the temporary file.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external">Sebastian Volland</a>. All rights reserved. (Last updated: 2016-03-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.5.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,76 @@
+StringExt-SHA256.swift
+	public func sha256sum() -> String
+NSDateExt.swift
+	public func ==(lhs: NSDate, rhs: NSDate) -> Bool
+	public func <(lhs: NSDate, rhs: NSDate) -> Bool
+StringExt.swift
+	public func trim() -> String
+	public func trim(char: Character) -> String
+	func dataFromHexString() -> NSData?
+NSColorExt.swift
+	public convenience init(rgba: String)
+File.swift
+	public enum FileError: ErrorType
+	case FileNotFound(file: String)
+	case FileNotReadable(file: String)
+	case FileNotWriteable(file: String)
+	public enum FileError : ErrorType
+	public var description: String
+	public func ==(lhs: FilePath, rhs: FilePath) -> Bool
+	public let name: String
+	public required init(name: String)
+	public class func create(name: String) throws -> Self
+	public class func existing(name: String) throws -> Self
+	public var description: String
+	public var url: NSURL?
+	public var baseName: String
+	public var baseNameWithoutExtension: String
+	public var fileExtension: String
+	public var exists: Bool
+	public func checkExists() throws
+	public var displayName: String
+	public var mtime: NSDate?
+	public var ctime: NSDate?
+	public var isSymlink: Bool
+	public var isDirectory: Bool
+	public func nameWithoutExtension(ext: String = "") -> String
+	public func relativeName(baseDirectory: Directory) -> String
+	public func create() throws
+	public func delete() throws
+	public func deleteIfExists() -> Bool
+	public func trash() -> File?
+	public var size: Int64
+	public var dirName: String
+	public var directory: Directory
+	public override func create() throws
+	public func move(destFile: File) throws
+	public func copy(destFile: File) throws
+	public func copy(destFile: File, range:(from: Int64, to: Int64)) throws
+	public func truncate(size: Int64) throws
+	public func setContents(contents: String) throws
+	public func append(string: String) throws
+	public func append(srcFile: File) throws
+	public func getContents() throws -> String
+NSTimeIntervalExt.swift
+	public var formatTimeLeft: String?
+File-NSStream.swift
+	public func getInputStream() throws -> NSInputStream
+	public func getOutputStream(append: Bool) throws -> NSOutputStream
+File-Temp.swift
+	public static func createTemp(prefix: String = "tmp") throws -> Self
+File-SHA256.swift
+	public func computeSHA256(range: (from: Int64, to: Int64)) throws -> String
+	public func computeSHA256() throws -> String
+File-IniReader.swift
+	public func readIni() throws -> [String: [String: String]]
+IniParser.swift
+	public class IniParser
+	public class func parse(string string: String) -> [String: [String: String]]
+UInt8Ext.swift
+	public func toHex() -> String
+File-SHA256TreeHash.swift
+	public func getChunkSHA256Hashes(chunkSize: Int, progress: ((percentDone: Int) -> Bool)? = nil) throws -> [NSData]
+	public class TreeHash
+	public class func computeSHA256TreeHash(hashes: [NSData]) -> String
+NSDataExt.swift
+	public func hexString() -> String
